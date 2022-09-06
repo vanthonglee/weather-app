@@ -21,13 +21,17 @@
     "title": "About Page",
     "back": "Back to Home"
   },
+  "weather": {
+    "title": "Weather"
+  },
   "company": {
     "title": "Company name"
   },
   "navigation": {
     "links": {
       "home": "Home",
-      "about": "About"
+      "about": "About",
+      "weather": "Weather"
     }
   }
 }

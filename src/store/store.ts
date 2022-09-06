@@ -5,6 +5,7 @@ import { createReduxHistoryContext } from 'redux-first-history'
 import logger from 'redux-logger'
 
 import { Env } from 'config/Env'
+import searchReducer from 'features/common/search/store/search.slice'
 import postsReducer from 'features/posts/store/posts.slice'
 import { rootSaga } from 'store/rootSaga'
 
@@ -20,6 +21,7 @@ const makeStore = () => {
   const store = configureStore({
     reducer: {
       posts: postsReducer,
+      search: searchReducer,
       router: routerReducer,
     },
     devTools: Env.isDev(),

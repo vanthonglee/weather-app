@@ -18,6 +18,8 @@ export const Env = {
   isMswEnabled() {
     return this.MSW_ENABLED === 'true'
   },
+
+  ACCUWEATHER_API_KEY: process.env.REACT_APP_ACCUWEATHER_API_KEY,
 }
 
 export default Env

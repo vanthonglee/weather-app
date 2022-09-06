@@ -4,7 +4,6 @@ import { Button, ButtonGroup, IconButton, Link } from '@mui/material'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
-import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { NavLink as RouterLink } from 'react-router-dom'
 
@@ -49,6 +48,15 @@ const Header = (props: HeaderProps) => {
               sx={{ my: 1, mx: 1.5 }}
             >
               {t('navigation.links.about')}
+            </Link>
+            <Link
+              component={RouterLink}
+              to={'/weather'}
+              variant="button"
+              color="text.primary"
+              sx={{ my: 1, mx: 1.5 }}
+            >
+              {t('navigation.links.weather')}
             </Link>
             <ButtonGroup variant="text" color="inherit">
               <Button onClick={() => onChangeLanguage('en')}>🇺🇸</Button>

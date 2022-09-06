@@ -10,5 +10,11 @@
       "title": "Redux Toolkit",
       "body": "The official, opinionated, batteries-included toolset for efficient Redux development."
     }
-  ]
+  ],
+  "locations": {
+    "1111": {
+      "LocalizeName": "Ha Noi",
+      "id": "1111"
+    }
+  }
 }
