@@ -1,5 +1,5 @@
 import { SagaIterator } from 'redux-saga'
-import { call, put, takeEvery, takeLatest } from 'redux-saga/effects'
+import { call, put, takeLatest } from 'redux-saga/effects'
 
 import { getLocationsAutoComplete } from 'features/common/search/api'
 import { searchActions } from 'features/common/search/store'
@@ -16,7 +16,7 @@ function* onGetLocationsAutoComplete({
     const suggests: Location[] = yield call(getLocationsAutoComplete, payload)
     yield put(searchActions.fetchSuggestsSucceeded(suggests))
   } catch (error) {
-    yield put({ type: searchActions.fetchSuggestsSucceeded.name, error })
+    // yield put({ type: searchActions.fetchSuggestsSucceeded.name, error })
   }
 }
 

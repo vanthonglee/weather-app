@@ -21,7 +21,6 @@ export const InputSearchView = (props: InputSearchViewProps) => {
     options: suggests,
     getOptionLabel: (option: Location) =>
       typeof option === 'string' ? option : option.LocalizedName,
-    // getOptionSelected: (option: Location, value: Location) => option.Key === value.Key,
   }
 
   return (
@@ -29,7 +28,6 @@ export const InputSearchView = (props: InputSearchViewProps) => {
       <Autocomplete
         id="free-solo-demo"
         {...defaultProps}
-        freeSolo
         onChange={onSelectedChange}
         onInputChange={onInputChange}
         renderInput={params => <TextField {...params} label="Search City" />}

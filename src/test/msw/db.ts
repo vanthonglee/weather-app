@@ -14,7 +14,7 @@ const models: ModelDictionary = {
     Key: primaryKey(String),
     LocalizedName: String,
   },
-  weatherForcasts: {
+  weather: {
     id: primaryKey(String),
     Headline: Object,
     DailyForecasts: Array,

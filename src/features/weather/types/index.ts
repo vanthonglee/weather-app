@@ -1,7 +1,10 @@
 // Weather Forcast
 export type WeatherForcast = {
-  Minium: Temperature
-  Maximum: Temperature
+  Date: string
+  Temperature: {
+    Minimum: Temperature
+    Maximum: Temperature
+  }
 }
 
 type Temperature = {
