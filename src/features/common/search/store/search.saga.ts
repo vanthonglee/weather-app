@@ -12,13 +12,21 @@ function* onGetLocationsAutoComplete({
   type: typeof searchActions
   payload: string
 }): SagaIterator {
-  const suggests: Location[] = yield call(getLocationsAutoComplete, payload)
-  yield put(searchActions.fetchSuggestsSucceeded(suggests))
+  try {
+    const suggests: Location[] = yield call(getLocationsAutoComplete, payload)
+    yield put(searchActions.fetchSuggestsSucceeded(suggests))
+  } catch (error) {
+    yield put({ type: searchActions.fetchSuggestsSucceeded.name, error })
+  }
 }
 
 // Watcher Saga
 export function* searchWatcherSaga(): SagaIterator {
-  yield takeEvery(searchActions.fetchSuggests.type, onGetLocationsAutoComplete)
+  try {
+    yield takeLatest(searchActions.fetchSuggests.type, onGetLocationsAutoComplete)
+  } catch (error) {
+    yield put({ type: 'SEARCH_WATCHER_SAGA_FAILED', error })
+  }
 }
 
 export default searchWatcherSaga

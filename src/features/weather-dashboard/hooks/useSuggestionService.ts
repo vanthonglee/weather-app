@@ -1,8 +1,9 @@
 import { useCallback } from 'react'
 
-import { searchActions, selectSuggests } from 'features/common/search/store'
+import { searchActions, searchSelectors } from 'features/common/search/store'
 import { Location } from 'features/common/search/types'
-import { useAppDispatch, useAppSelector } from 'store/hooks'
+import { useAppDispatch } from 'store/hooks'
+import { store } from 'store/store'
 
 export type SearchServiceOperators = {
   suggests: Location[]
@@ -13,11 +14,12 @@ export type SearchServiceOperators = {
  * PostService custom-hooks
  * @see https://reactjs.org/docs/hooks-custom.html
  */
+
 export const useSearchService = (): Readonly<SearchServiceOperators> => {
   const dispatch = useAppDispatch()
 
   return {
-    suggests: useAppSelector(selectSuggests),
+    suggests: searchSelectors.selectAll,
 
     fetchLocationsAutocomplete: useCallback(
       (query: string) => {

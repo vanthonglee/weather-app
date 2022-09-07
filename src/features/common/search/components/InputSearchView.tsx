@@ -3,12 +3,6 @@ import TextField from '@mui/material/TextField'
 
 import { Location } from 'features/common/search/types'
 
-// import React, { useEffect } from 'react'
-
-// import { PostForm } from 'features/posts/components/PostForm'
-// import { PostList } from 'features/posts/components/PostList'
-// import { usePostService } from 'features/posts/hooks/usePostService'
-
 export type InputSearchViewProps = {
   keyword: string
   suggests: Location[]
@@ -19,30 +13,29 @@ export const InputSearchView = (props: InputSearchViewProps) => {
   const { keyword, setKeyword, suggests, onSuggestionUpdate } = props
 
   const defaultProps = {
-    options: suggests || [],
-    getOptionLabel: (option: Location) => option.LocalizedName,
+    options: suggests,
+    getOptionLabel: (option: Location) =>
+      typeof option === 'string' ? option : option.LocalizedName,
+    getOptionSelected: (option: Location, value: Location) => option.Key === value.Key,
   }
 
   return (
     <>
       <Autocomplete
-        inputValue={keyword}
         id="free-solo-demo"
         {...defaultProps}
-        // onChange={(event, newValue: Location) => setKeyword(newValue.LocalizedName)}
-        renderInput={params => {
-          // console.log('params', params)
-          return (
-            <TextField
-              {...params}
-              label="Search City"
-              onChange={e => {
-                setKeyword(e.target.value)
-                onSuggestionUpdate(e.target.value)
-              }}
-            />
-          )
-        }}
+        onChange={(event: React.ChangeEvent<HTMLInputElement>, newValue: Location): void =>
+          newValue && setKeyword(newValue.Key)
+        }
+        renderInput={params => (
+          <TextField
+            {...params}
+            label="Search City"
+            onChange={e => {
+              onSuggestionUpdate(e.target.value)
+            }}
+          />
+        )}
         sx={{ width: '300px', margin: 'auto' }}
       />
     </>

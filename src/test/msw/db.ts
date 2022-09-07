@@ -10,6 +10,10 @@ const models: ModelDictionary = {
     title: String,
     body: String,
   },
+  locations: {
+    Key: primaryKey(String),
+    LocalizedName: String,
+  },
 }
 
 export const db = factory(models)
