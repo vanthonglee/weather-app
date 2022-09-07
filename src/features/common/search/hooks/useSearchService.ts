@@ -1,7 +1,7 @@
 import { useCallback } from 'react'
 
 import { searchActions, searchSelectors } from 'features/common/search/store'
-import { Location } from 'features/common/search/types'
+import type { Location } from 'features/common/search/types'
 import { useAppDispatch, useAppSelector } from 'store/hooks'
 
 export type SearchServiceOperators = {

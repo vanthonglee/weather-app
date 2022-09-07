@@ -3,7 +3,7 @@ import { call, put, takeEvery, takeLatest } from 'redux-saga/effects'
 
 import { getLocationsAutoComplete } from 'features/common/search/api'
 import { searchActions } from 'features/common/search/store'
-import { Location } from 'features/common/search/types'
+import type { Location } from 'features/common/search/types'
 
 // Worker Sagas
 function* onGetLocationsAutoComplete({

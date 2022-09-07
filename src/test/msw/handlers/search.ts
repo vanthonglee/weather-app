@@ -3,14 +3,13 @@
 import { rest } from 'msw'
 
 import Env from 'config/Env'
-import { Post } from 'features/posts'
-import { db, persistDb } from 'test/msw/db'
+import { db } from 'test/msw/db'
 
-const BASE_URL = `${Env.API_BASE_URL}/locations/v1/cities/autocomplete`
+const BASE_URL = `${Env.API_BASE_URL}/locations`
 
 export const searchHandlers = [
   // search autocomplete locations
-  rest.get(`${BASE_URL}`, (req, res, ctx) => {
+  rest.get(`${BASE_URL}/v1/cities/autocomplete`, (req, res, ctx) => {
     try {
       const query = req.url.searchParams.get('q')?.trim().toLocaleLowerCase() || ''
 

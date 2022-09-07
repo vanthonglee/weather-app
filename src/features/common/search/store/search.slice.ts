@@ -1,7 +1,7 @@
 // DUCKS pattern
 import { createAction, createSlice, PayloadAction, createEntityAdapter } from '@reduxjs/toolkit'
 
-import { Location } from 'features/common/search/types'
+import type { Location } from 'features/common/search/types'
 import type { RootState } from 'store/store'
 
 // export interface SearchState {
@@ -34,13 +34,21 @@ export const searchSlice = createSlice({
     // },
     // ids: ['1111', '2222'],
     keyword: '',
+    selectedLocation: '',
   }),
   reducers: {
     setKeyword(state, action: PayloadAction<string>) {
       state.keyword = action.payload
     },
+    setSelectedLocation(state, action: PayloadAction<string>) {
+      state.selectedLocation = action.payload
+    },
     fetchSuggestsSucceeded(state, action) {
       searchAdapter.setAll(state, action.payload)
+    },
+    resetAll(state) {
+      searchAdapter.removeAll(state)
+      state.selectedLocation = ''
     },
   },
 })
@@ -48,14 +56,17 @@ export const searchSlice = createSlice({
 // Actions
 export const searchActions = {
   setKeyword: searchSlice.actions.setKeyword,
+  setSelectedLocation: searchSlice.actions.setSelectedLocation,
   fetchSuggestsSucceeded: searchSlice.actions.fetchSuggestsSucceeded,
   fetchSuggests: createAction(`${searchSlice.name}/fetchSuggests`, (query: string) => ({
     payload: query,
   })),
+  resetAll: searchSlice.actions.resetAll,
 }
 
 // Selectors
 export const selectKeyword = (state: RootState) => state.search.keyword
+export const selectSelectedLocation = (state: RootState) => state.search.selectedLocation
 export const searchSelectors = searchAdapter.getSelectors<RootState>(state => state.search)
 
 // Reducer

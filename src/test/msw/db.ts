@@ -14,6 +14,11 @@ const models: ModelDictionary = {
     Key: primaryKey(String),
     LocalizedName: String,
   },
+  weatherForcasts: {
+    id: primaryKey(String),
+    Headline: Object,
+    DailyForecasts: Array,
+  },
 }
 
 export const db = factory(models)

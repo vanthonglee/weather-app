@@ -18,74 +18,73 @@
     { "Key": "4444", "LocalizedName": "Ha Noi" }
   ],
   "weatherForcast": {
-    "Headline": {
-      "DailyForecasts": [
-        {
-          "Date": "2022-09-06T07:00:00+08:00",
-          "Temperature": {
-            "Minimum": {
-              "Value": 64,
-              "Unit": "F"
-            },
-            "Maximum": {
-              "Value": 79,
-              "Unit": "F"
-            }
-          }
-        },
-        {
-          "Date": "2022-09-07T07:00:00+08:00",
-          "Temperature": {
-            "Minimum": {
-              "Value": 64,
-              "Unit": "F"
-            },
-            "Maximum": {
-              "Value": 81,
-              "Unit": "F"
-            }
-          }
-        },
-        {
-          "Date": "2022-09-08T07:00:00+08:00",
-          "Temperature": {
-            "Minimum": {
-              "Value": 68,
-              "Unit": "F"
-            },
-            "Maximum": {
-              "Value": 79,
-              "Unit": "F"
-            }
-          }
-        },
-        {
-          "Date": "2022-09-09T07:00:00+08:00",
-          "Temperature": {
-            "Minimum": {
-              "Value": 68,
-              "Unit": "F"
-            },
-            "Maximum": {
-              "Value": 79,
-              "Unit": "F"
-            }
-          }
-        },
-        {
-          "Date": "2022-09-10T07:00:00+08:00",
-          "Temperature": {
-            "Minimum": {
-              "Value": 68,
-              "Unit": "F"
-            },
-            "Maximum": {
-              "Value": 79,
-              "Unit": "F"
-            }
+    "Headline": {},
+    "DailyForecasts": [
+      {
+        "Date": "2022-09-06T07:00:00+08:00",
+        "Temperature": {
+          "Minimum": {
+            "Value": 64,
+            "Unit": "F"
+          },
+          "Maximum": {
+            "Value": 79,
+            "Unit": "F"
           }
         }
-      ]
-    }
+      },
+      {
+        "Date": "2022-09-07T07:00:00+08:00",
+        "Temperature": {
+          "Minimum": {
+            "Value": 64,
+            "Unit": "F"
+          },
+          "Maximum": {
+            "Value": 81,
+            "Unit": "F"
+          }
+        }
+      },
+      {
+        "Date": "2022-09-08T07:00:00+08:00",
+        "Temperature": {
+          "Minimum": {
+            "Value": 68,
+            "Unit": "F"
+          },
+          "Maximum": {
+            "Value": 79,
+            "Unit": "F"
+          }
+        }
+      },
+      {
+        "Date": "2022-09-09T07:00:00+08:00",
+        "Temperature": {
+          "Minimum": {
+            "Value": 68,
+            "Unit": "F"
+          },
+          "Maximum": {
+            "Value": 79,
+            "Unit": "F"
+          }
+        }
+      },
+      {
+        "Date": "2022-09-10T07:00:00+08:00",
+        "Temperature": {
+          "Minimum": {
+            "Value": 68,
+            "Unit": "F"
+          },
+          "Maximum": {
+            "Value": 79,
+            "Unit": "F"
+          }
+        }
+      }
+    ]
   }
 }

@@ -1,22 +1,27 @@
 import Autocomplete from '@mui/material/Autocomplete'
 import TextField from '@mui/material/TextField'
 
-import { Location } from 'features/common/search/types'
+import type { Location } from 'features/common/search/types'
 
-export type InputSearchViewProps = {
-  keyword: string
+type InputSearchViewProps = {
   suggests: Location[]
-  setKeyword: (keyword: string) => void
+
   onSuggestionUpdate: (keyword: string) => void
+  onSelectedChange: (
+    _: React.SyntheticEvent<Element, Event>,
+    value: string | Location | null,
+  ) => void
+  onInputChange: (_: React.SyntheticEvent<Element, Event>, newInputValue: string) => void
 }
+
 export const InputSearchView = (props: InputSearchViewProps) => {
-  const { keyword, setKeyword, suggests, onSuggestionUpdate } = props
+  const { suggests, onSelectedChange, onInputChange } = props
 
   const defaultProps = {
     options: suggests,
     getOptionLabel: (option: Location) =>
       typeof option === 'string' ? option : option.LocalizedName,
-    getOptionSelected: (option: Location, value: Location) => option.Key === value.Key,
+    // getOptionSelected: (option: Location, value: Location) => option.Key === value.Key,
   }
 
   return (
@@ -24,18 +29,10 @@ export const InputSearchView = (props: InputSearchViewProps) => {
       <Autocomplete
         id="free-solo-demo"
         {...defaultProps}
-        onChange={(event: React.ChangeEvent<HTMLInputElement>, newValue: Location): void =>
-          newValue && setKeyword(newValue.Key)
-        }
-        renderInput={params => (
-          <TextField
-            {...params}
-            label="Search City"
-            onChange={e => {
-              onSuggestionUpdate(e.target.value)
-            }}
-          />
-        )}
+        freeSolo
+        onChange={onSelectedChange}
+        onInputChange={onInputChange}
+        renderInput={params => <TextField {...params} label="Search City" />}
         sx={{ width: '300px', margin: 'auto' }}
       />
     </>

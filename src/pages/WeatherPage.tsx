@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 
-import { WeatherContainer } from 'features/weather-dashboard/components/WeatherContainer'
+import { WeatherContainer } from 'features/weather/components/WeatherContainer'
 import TitleTypography from 'libs/ui/components/TitleTypography'
 
 const WeatherPage = () => {
