@@ -134,3 +134,4 @@ My project try to follow these design patterns:
 - [ ] Improve Test Coverage > 80%
 - [ ] Apply Security Best Practices
 - [ ] Benchmark Web Performance and Improve Performance
+- [ ] Improve CI/CD pipelines
