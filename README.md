@@ -30,7 +30,9 @@
     * [Features](#features)
     * [Project Structure](#project-structure)
 - [How To Run This Project](#how-to-run-this-project)
-- [License](#license)
+- [Design Patterns](#design-patterns)
+- [Todos In Future](#todo-in-future)
+
 
 <!-- tocstop -->
 
@@ -126,3 +128,9 @@ My project try to follow these design patterns:
 2. Container-View Pattern 
 
 3. Atomic design
+
+## Todos In Future
+
+- [ ] Improve Test Coverage > 80%
+- [ ] Apply Security Best Practices
+- [ ] Benchmark Web Performance and Improve Performance
