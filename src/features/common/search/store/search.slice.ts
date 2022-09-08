@@ -67,7 +67,7 @@ export const searchActions = {
 // Selectors
 export const selectKeyword = (state: RootState) => state.search.keyword
 export const selectSelectedLocation = (state: RootState) => state.search.selectedLocation
+export const selectEntities = (state: RootState) => state.search.entities
 export const searchSelectors = searchAdapter.getSelectors<RootState>(state => state.search)
-
 // Reducer
 export default searchSlice.reducer

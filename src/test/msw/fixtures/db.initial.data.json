@@ -17,7 +17,7 @@
     { "Key": "3333", "LocalizedName": "Dong Nai" },
     { "Key": "4444", "LocalizedName": "Ha Noi" }
   ],
-  "weather": [
+  "weathers": [
     {
       "id": "1111",
       "Headline": {},

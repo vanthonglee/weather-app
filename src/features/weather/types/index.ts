@@ -2,12 +2,12 @@
 export type WeatherForcast = {
   Date: string
   Temperature: {
-    Minimum: Temperature
-    Maximum: Temperature
+    Minimum: TemDegree
+    Maximum: TemDegree
   }
 }
 
-type Temperature = {
+type TemDegree = {
   Value: number
   Unit: string
 }

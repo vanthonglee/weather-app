@@ -1,11 +1,17 @@
 import { useCallback } from 'react'
 
-import { searchActions, selectKeyword, selectSelectedLocation } from 'features/common/search/store'
+import {
+  searchActions,
+  selectEntities,
+  selectKeyword,
+  selectSelectedLocation,
+} from 'features/common/search/store'
 import { useAppDispatch, useAppSelector } from 'store/hooks'
 
 export type SearchOperators = {
   selectedLocation: string
   keyword: string
+  selectEntities: object
 
   setKeyword: (query: string) => void
   setSelectedLocation: (locationKey: string) => void
@@ -22,6 +28,7 @@ export const useSearch = (): Readonly<SearchOperators> => {
   return {
     keyword: useAppSelector(selectKeyword),
     selectedLocation: useAppSelector(selectSelectedLocation),
+    selectEntities: useAppSelector(selectEntities),
 
     setKeyword: useCallback(
       (query: string) => {

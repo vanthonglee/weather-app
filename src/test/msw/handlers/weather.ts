@@ -17,7 +17,7 @@ export const weatherHandlers = [
         return res(ctx.status(404), ctx.json([]))
       }
 
-      const result = db.weather.findFirst({
+      const result = db.weathers.findFirst({
         where: {
           id: {
             equals: locationKey,
