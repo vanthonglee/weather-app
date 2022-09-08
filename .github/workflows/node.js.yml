@@ -64,4 +64,4 @@ jobs:
           cache: "npm"
       - run: yarn install --frozen-lockfile
       - run: yarn build --if-present
-      - run: yarn cy:open
+      - run: yarn cy:run
