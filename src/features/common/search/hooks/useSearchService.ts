@@ -9,11 +9,6 @@ export type SearchServiceOperators = {
   fetchLocationsAutocomplete: (query: string) => void
 }
 
-/**
- * PostService custom-hooks
- * @see https://reactjs.org/docs/hooks-custom.html
- */
-
 export const useSearchService = (): Readonly<SearchServiceOperators> => {
   const dispatch = useAppDispatch()
 

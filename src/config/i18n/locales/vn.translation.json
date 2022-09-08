@@ -1,6 +1,6 @@
 {
   "home": {
-    "title": "Below Is My Solution",
+    "title": "Lời Giải Của Mình",
     "buttons": {
       "submit": "Add new Post",
       "reset": "Reset",
@@ -9,15 +9,15 @@
     }
   },
   "weather": {
-    "title": "Weather"
+    "title": "Dự Báo Thời Tiết"
   },
   "my-profile": {
     "title": "George Lee"
   },
   "navigation": {
     "links": {
-      "home": "Home",
-      "weather": "Weather"
+      "home": "Trang Chủ",
+      "weather": "Thời Tiết"
     }
   }
 }

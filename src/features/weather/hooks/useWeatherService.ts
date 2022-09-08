@@ -17,11 +17,6 @@ export type WeatherServiceOperators = {
   fetch5DayDailyForcasts: (locationKey: string) => void
 }
 
-/**
- * PostService custom-hooks
- * @see https://reactjs.org/docs/hooks-custom.html
- */
-
 export const useWeatherService = (): Readonly<WeatherServiceOperators> => {
   const dispatch = useAppDispatch()
 

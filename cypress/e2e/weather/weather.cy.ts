@@ -1,5 +1,5 @@
 describe('About Page', () => {
-  it('should open about page when user clicks about navigation item', () => {
+  it('should open weather page when user select location and select specific location to receive weather forcasts', () => {
     cy.visit('/weather')
 
     cy.get(`#location-autoComplete`).click().type('h')

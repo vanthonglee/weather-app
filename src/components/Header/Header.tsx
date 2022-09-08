@@ -27,40 +27,41 @@ const Header = (props: HeaderProps) => {
         sx={{ borderBottom: theme => `1px solid ${theme.palette.divider}` }}
       >
         <Toolbar sx={{ flexWrap: 'wrap' }}>
-          <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
-            {t('company.title')}
+          <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1, fontWeight: 'bold' }}>
+            <Link
+              underline="hover"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://vanthonglee.com"
+            >
+              {t('my-profile.title')}
+            </Link>
           </Typography>
+
           <nav>
             <Link
               component={RouterLink}
               to={'/'}
               variant="button"
               color="text.primary"
+              fontWeight={700}
               sx={{ my: 1, mx: 1.5 }}
             >
               {t('navigation.links.home')}
             </Link>
             <Link
               component={RouterLink}
-              to={'/about'}
-              variant="button"
-              color="text.primary"
-              sx={{ my: 1, mx: 1.5 }}
-            >
-              {t('navigation.links.about')}
-            </Link>
-            <Link
-              component={RouterLink}
               to={'/weather'}
               variant="button"
               color="text.primary"
+              fontWeight={700}
               sx={{ my: 1, mx: 1.5 }}
             >
               {t('navigation.links.weather')}
             </Link>
             <ButtonGroup variant="text" color="inherit">
               <Button onClick={() => onChangeLanguage('en')}>🇺🇸</Button>
-              <Button onClick={() => onChangeLanguage('pl')}>🇵🇱</Button>
+              <Button onClick={() => onChangeLanguage('vn')}>🇻🇳</Button>
             </ButtonGroup>
             <IconButton sx={{ ml: 1 }} onClick={onChangeThemeClick} color="inherit">
               {currentThemeMode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}

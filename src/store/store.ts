@@ -6,7 +6,6 @@ import logger from 'redux-logger'
 
 import { Env } from 'config/Env'
 import searchReducer from 'features/common/search/store/search.slice'
-import postsReducer from 'features/posts/store/posts.slice'
 import weatherReducer from 'features/weather/store/weather.slice'
 import { rootSaga } from 'store/rootSaga'
 
@@ -21,7 +20,6 @@ const makeStore = () => {
 
   const store = configureStore({
     reducer: {
-      posts: postsReducer,
       search: searchReducer,
       weather: weatherReducer,
       router: routerReducer,

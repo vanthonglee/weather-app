@@ -18,10 +18,6 @@ export type SearchOperators = {
   removeSelectedLocation: () => void
 }
 
-/**
- * PostService custom-hooks
- * @see https://reactjs.org/docs/hooks-custom.html
- */
 export const useSearch = (): Readonly<SearchOperators> => {
   const dispatch = useAppDispatch()
 

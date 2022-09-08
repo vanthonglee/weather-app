@@ -5,11 +5,6 @@ import Env from 'config/Env'
 import initialMockedDb from 'test/msw/fixtures/db.initial.data.json'
 
 const models: ModelDictionary = {
-  posts: {
-    id: primaryKey(String),
-    title: String,
-    body: String,
-  },
   locations: {
     Key: primaryKey(String),
     LocalizedName: String,

@@ -16,6 +16,6 @@ describe('i18n', () => {
 
     cy.findByRole('button', { name: /🇺🇸/i }).click()
 
-    cy.findByRole('heading', { name: /company name/i }).should('exist')
+    cy.findByRole('heading', { name: /my-profile name/i }).should('exist')
   })
 })

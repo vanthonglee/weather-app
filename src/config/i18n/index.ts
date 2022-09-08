@@ -2,7 +2,7 @@ import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 
 import en from 'config/i18n/locales/en.translation.json'
-import pl from 'config/i18n/locales/pl.translation.json'
+import vn from 'config/i18n/locales/vn.translation.json'
 
 i18n.use(initReactI18next).init({
   lng: 'en',
@@ -11,8 +11,8 @@ i18n.use(initReactI18next).init({
     en: {
       translation: en,
     },
-    pl: {
-      translation: pl,
+    vn: {
+      translation: vn,
     },
   },
   debug: false,

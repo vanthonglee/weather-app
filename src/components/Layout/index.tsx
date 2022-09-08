@@ -8,7 +8,7 @@ import { Outlet } from 'react-router-dom'
 import Header from 'components/Header/Header'
 
 const Layout = () => {
-  const [mode, setMode] = React.useState<'light' | 'dark'>('light')
+  const [mode, setMode] = React.useState<'light' | 'dark'>('dark')
   const { i18n } = useTranslation()
 
   // TODO: move state to redux
@@ -30,6 +30,9 @@ const Layout = () => {
       createTheme({
         palette: {
           mode,
+          primary: {
+            main: '#00ff95',
+          },
         },
       }),
     [mode],
