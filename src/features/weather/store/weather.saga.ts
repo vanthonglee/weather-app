@@ -7,7 +7,7 @@ import { WeatherForcast } from '../types'
 import { weatherActions } from './weather.slice'
 
 // Worker Sagas
-function* onGet5DayDailyForcasts({
+export function* onGet5DayDailyForcasts({
   payload,
 }: {
   type: typeof weatherActions.fetch5DayDailyForcasts

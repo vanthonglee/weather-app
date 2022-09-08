@@ -26,7 +26,8 @@ export const InputSearchView = (props: InputSearchViewProps) => {
   return (
     <>
       <Autocomplete
-        id="free-solo-demo"
+        id="location-autoComplete"
+        data-cy="location-autoComplete"
         {...defaultProps}
         onChange={onSelectedChange}
         onInputChange={onInputChange}

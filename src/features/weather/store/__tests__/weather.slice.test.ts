@@ -89,18 +89,21 @@ describe('Selectors tests', () => {
   })
 })
 
-const expectedSagaWeatherForcasts: WeatherForcast[] = [...expectedForcasts]
+const expectedSagaWeatherForcasts: WeatherForcast[] = []
 
 jest.mock('../../api/index', () => ({
-  async get5DayDailyForcasts() {
-    return expectedSagaWeatherForcasts
+  async get5DayDailyForcasts(locationKey: string) {
+    if (locationKey) {
+      return expectedSagaWeatherForcasts
+    }
+    return []
   },
 }))
 
 describe('Saga tests', () => {
-  it('should return 5 forcasts when fetch5DayDailyForcasts dispatched (using mocked Rest API)', async () => {
+  it('should return 0 forcasts when fetch5DayDailyForcasts dispatched (using mocked Rest API)', async () => {
     // Given
-    const locationKey = '1111'
+    const locationKey = null
 
     // When
     await store.dispatch(weatherActions.fetch5DayDailyForcasts(locationKey))

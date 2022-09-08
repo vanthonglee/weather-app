@@ -1,0 +1,38 @@
+import { nanoid } from '@reduxjs/toolkit'
+import { expectSaga, testSaga } from 'redux-saga-test-plan'
+import { call } from 'redux-saga-test-plan/matchers'
+
+import { get5DayDailyForcasts } from 'features/weather/api'
+import { onGet5DayDailyForcasts } from 'features/weather/store/weather.saga'
+import weatherReducer, { weatherActions } from 'features/weather/store/weather.slice'
+import { WeatherForcast } from 'features/weather/types'
+
+const expectedSagaForcasts: WeatherForcast[] = [
+  {
+    Date: '2022-09-06T07:00:00+08:00',
+    Temperature: {
+      Minimum: {
+        Value: 24,
+        Unit: 'F',
+      },
+      Maximum: {
+        Value: 79,
+        Unit: 'F',
+      },
+    },
+  },
+]
+
+describe('Saga - test examples', () => {
+  it('should execute commands in exact order with redux-saga-test-plan', async () =>
+    testSaga(onGet5DayDailyForcasts, {
+      type: weatherActions.fetch5DayDailyForcasts,
+      payload: '1111',
+    })
+      .next()
+      .provide([call(get5DayDailyForcasts, '1111')])
+      .next(expectedSagaForcasts)
+      .put(weatherActions.fetch5DayDailyForcastsSucceeded(expectedSagaPosts))
+      .next()
+      .isDone())
+})
