@@ -1,0 +1,306 @@
+{
+  "posts": [
+    {
+      "id": "v-UDRFY8Vqil3MXP0UPyE",
+      "title": "Redux-Saga",
+      "body": "An intuitive Redux side effect manager."
+    },
+    {
+      "id": "fxhwAGn0MGcQzbccTTIs5",
+      "title": "Redux Toolkit",
+      "body": "The official, opinionated, batteries-included toolset for efficient Redux development."
+    }
+  ],
+  "locations": [
+    { "Key": "1111", "LocalizedName": "Ho Chi Minh" },
+    { "Key": "2222", "LocalizedName": "Danang" },
+    { "Key": "3333", "LocalizedName": "Dong Nai" },
+    { "Key": "4444", "LocalizedName": "Ha Noi" }
+  ],
+  "weathers": [
+    {
+      "id": "1111",
+      "Headline": {},
+      "DailyForecasts": [
+        {
+          "Date": "2022-09-06T07:00:00+08:00",
+          "Temperature": {
+            "Minimum": {
+              "Value": 24,
+              "Unit": "F"
+            },
+            "Maximum": {
+              "Value": 79,
+              "Unit": "F"
+            }
+          }
+        },
+        {
+          "Date": "2022-09-07T07:00:00+08:00",
+          "Temperature": {
+            "Minimum": {
+              "Value": 64,
+              "Unit": "F"
+            },
+            "Maximum": {
+              "Value": 81,
+              "Unit": "F"
+            }
+          }
+        },
+        {
+          "Date": "2022-09-08T07:00:00+08:00",
+          "Temperature": {
+            "Minimum": {
+              "Value": 68,
+              "Unit": "F"
+            },
+            "Maximum": {
+              "Value": 79,
+              "Unit": "F"
+            }
+          }
+        },
+        {
+          "Date": "2022-09-09T07:00:00+08:00",
+          "Temperature": {
+            "Minimum": {
+              "Value": 68,
+              "Unit": "F"
+            },
+            "Maximum": {
+              "Value": 79,
+              "Unit": "F"
+            }
+          }
+        },
+        {
+          "Date": "2022-09-10T07:00:00+08:00",
+          "Temperature": {
+            "Minimum": {
+              "Value": 68,
+              "Unit": "F"
+            },
+            "Maximum": {
+              "Value": 79,
+              "Unit": "F"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "2222",
+      "Headline": {},
+      "DailyForecasts": [
+        {
+          "Date": "2022-09-06T07:00:00+08:00",
+          "Temperature": {
+            "Minimum": {
+              "Value": 64,
+              "Unit": "F"
+            },
+            "Maximum": {
+              "Value": 79,
+              "Unit": "F"
+            }
+          }
+        },
+        {
+          "Date": "2022-09-07T07:00:00+08:00",
+          "Temperature": {
+            "Minimum": {
+              "Value": 64,
+              "Unit": "F"
+            },
+            "Maximum": {
+              "Value": 81,
+              "Unit": "F"
+            }
+          }
+        },
+        {
+          "Date": "2022-09-08T07:00:00+08:00",
+          "Temperature": {
+            "Minimum": {
+              "Value": 68,
+              "Unit": "F"
+            },
+            "Maximum": {
+              "Value": 79,
+              "Unit": "F"
+            }
+          }
+        },
+        {
+          "Date": "2022-09-09T07:00:00+08:00",
+          "Temperature": {
+            "Minimum": {
+              "Value": 68,
+              "Unit": "F"
+            },
+            "Maximum": {
+              "Value": 79,
+              "Unit": "F"
+            }
+          }
+        },
+        {
+          "Date": "2022-09-10T07:00:00+08:00",
+          "Temperature": {
+            "Minimum": {
+              "Value": 68,
+              "Unit": "F"
+            },
+            "Maximum": {
+              "Value": 79,
+              "Unit": "F"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "3333",
+      "Headline": {},
+      "DailyForecasts": [
+        {
+          "Date": "2022-09-06T07:00:00+08:00",
+          "Temperature": {
+            "Minimum": {
+              "Value": 64,
+              "Unit": "F"
+            },
+            "Maximum": {
+              "Value": 79,
+              "Unit": "F"
+            }
+          }
+        },
+        {
+          "Date": "2022-09-07T07:00:00+08:00",
+          "Temperature": {
+            "Minimum": {
+              "Value": 64,
+              "Unit": "F"
+            },
+            "Maximum": {
+              "Value": 81,
+              "Unit": "F"
+            }
+          }
+        },
+        {
+          "Date": "2022-09-08T07:00:00+08:00",
+          "Temperature": {
+            "Minimum": {
+              "Value": 68,
+              "Unit": "F"
+            },
+            "Maximum": {
+              "Value": 79,
+              "Unit": "F"
+            }
+          }
+        },
+        {
+          "Date": "2022-09-09T07:00:00+08:00",
+          "Temperature": {
+            "Minimum": {
+              "Value": 68,
+              "Unit": "F"
+            },
+            "Maximum": {
+              "Value": 79,
+              "Unit": "F"
+            }
+          }
+        },
+        {
+          "Date": "2022-09-10T07:00:00+08:00",
+          "Temperature": {
+            "Minimum": {
+              "Value": 68,
+              "Unit": "F"
+            },
+            "Maximum": {
+              "Value": 79,
+              "Unit": "F"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "4444",
+      "Headline": {},
+      "DailyForecasts": [
+        {
+          "Date": "2022-09-06T07:00:00+08:00",
+          "Temperature": {
+            "Minimum": {
+              "Value": 64,
+              "Unit": "F"
+            },
+            "Maximum": {
+              "Value": 79,
+              "Unit": "F"
+            }
+          }
+        },
+        {
+          "Date": "2022-09-07T07:00:00+08:00",
+          "Temperature": {
+            "Minimum": {
+              "Value": 64,
+              "Unit": "F"
+            },
+            "Maximum": {
+              "Value": 81,
+              "Unit": "F"
+            }
+          }
+        },
+        {
+          "Date": "2022-09-08T07:00:00+08:00",
+          "Temperature": {
+            "Minimum": {
+              "Value": 68,
+              "Unit": "F"
+            },
+            "Maximum": {
+              "Value": 79,
+              "Unit": "F"
+            }
+          }
+        },
+        {
+          "Date": "2022-09-09T07:00:00+08:00",
+          "Temperature": {
+            "Minimum": {
+              "Value": 68,
+              "Unit": "F"
+            },
+            "Maximum": {
+              "Value": 79,
+              "Unit": "F"
+            }
+          }
+        },
+        {
+          "Date": "2022-09-10T07:00:00+08:00",
+          "Temperature": {
+            "Minimum": {
+              "Value": 68,
+              "Unit": "F"
+            },
+            "Maximum": {
+              "Value": 79,
+              "Unit": "F"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

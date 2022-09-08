@@ -1,0 +1,23 @@
+{
+  "home": {
+    "title": "Lời Giải Của Mình",
+    "buttons": {
+      "submit": "Add new Post",
+      "reset": "Reset",
+      "delete": "Delete",
+      "update": "Update"
+    }
+  },
+  "weather": {
+    "title": "Dự Báo Thời Tiết"
+  },
+  "my-profile": {
+    "title": "George Lee"
+  },
+  "navigation": {
+    "links": {
+      "home": "Trang Chủ",
+      "weather": "Thời Tiết"
+    }
+  }
+}

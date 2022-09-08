@@ -1,0 +1,23 @@
+{
+  "home": {
+    "title": "Below Is My Solution",
+    "buttons": {
+      "submit": "Add new Post",
+      "reset": "Reset",
+      "delete": "Delete",
+      "update": "Update"
+    }
+  },
+  "weather": {
+    "title": "Weather"
+  },
+  "my-profile": {
+    "title": "George Lee"
+  },
+  "navigation": {
+    "links": {
+      "home": "Home",
+      "weather": "Weather"
+    }
+  }
+}
