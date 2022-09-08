@@ -129,6 +129,8 @@ My project try to follow these design patterns:
 
 3. Atomic design
 
+4. Normalizing Data Structure for handling large amounts of data
+
 ## Todos In Future
 
 - [ ] Improve Test Coverage > 80%
